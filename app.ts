@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { indexRouter } from "./shared/infraestructure/indexRouter";
+
+import { indexRouter } from "./shared/IndexRouter";
 
 dotenv.config();
 

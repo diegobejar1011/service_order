@@ -1,9 +1,9 @@
-import { SendMessageService } from "../../shared/application/sendMessage";
-import { Amqplib } from "../../shared/infraestructure/ports/Amqplib";
+import { SendMessageService } from "../../shared/broker/application/sendMessageService";
+import { Amqplib } from "../../shared/broker/infraestructure/ports/Amqplib";
 import { CreateOrderService } from "../application/services/createOrderService";
 import { CreateOrderController } from "./controllers/createOrderController";
 
-const amqp = new Amqplib("amqp://44.208.6.233");
+const amqp = new Amqplib("amqp://18.209.192.241/");
 
 const sendMessageService = new SendMessageService(amqp);
 
