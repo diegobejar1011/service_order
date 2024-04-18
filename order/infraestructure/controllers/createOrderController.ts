@@ -7,8 +7,10 @@ export class CreateOrderController {
         try {
             const order = req.body;
             const result = await this.createdOrderService.execute(order);
+            console.log('Petición terminada');
             res.status(201).json(result);
         } catch (error: any) {
+            console.log(error);
             return res.status(500).json(error.message);
         }
     }
