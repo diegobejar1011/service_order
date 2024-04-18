@@ -7,9 +7,9 @@ export class CreateOrderController {
         try {
             const order = req.body;
             const result = await this.createdOrderService.execute(order);
-            res.status(201).send(result);
+            res.status(201).json(result);
         } catch (error: any) {
-            return res.status(500).send(error.message);
+            return res.status(500).json(error.message);
         }
     }
 }
